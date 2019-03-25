@@ -1,0 +1,10 @@
+.img {
+    display: block;
+    width: 280px;
+    height: 210px;
+}
+
+.container {
+    bottom: 65px;
+    position: relative;
+}

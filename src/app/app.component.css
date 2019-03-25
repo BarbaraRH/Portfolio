@@ -1,0 +1,26 @@
+.header {
+    height: 60px; 
+    width: 100%;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #C4C4C4;
+}
+
+.footer {
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    border-top: solid #8F8E8E 2px;; 
+    height: 60px; 
+    width: 100%;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-top: 8px;
+}
