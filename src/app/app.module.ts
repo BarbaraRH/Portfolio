@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { WorkComponent } from './components/work/work.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { WorkDetailComponent } from './components/work-detail/work-detail.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ContactComponent } from './components/contact/contact.component';
     WorkComponent,
     AboutComponent,
     ContactComponent,
+    WorkDetailComponent,
   ],
   imports: [
     BrowserModule,

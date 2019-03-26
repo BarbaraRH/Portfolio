@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { WorkComponent } from './components/work/work.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { WorkDetailComponent } from './components/work-detail/work-detail.component';
 
 const routes: Routes = [{ path: 'work', component: WorkComponent },
 { path: 'about', component: AboutComponent },
 { path: 'contact', component: ContactComponent },
-{ path: '', redirectTo: '/work', pathMatch: 'full' }
+{ path: '', redirectTo: '/work', pathMatch: 'full' },
+{ path: 'detail/:project', component: WorkDetailComponent }
 ];
 
 @NgModule({
