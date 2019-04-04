@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkDetailComponent } from './components/work-detail/work-detail.component';
+import { ProjectService } from '../../project.service';
 
 @Component({
   selector: 'app-work',
@@ -7,14 +7,12 @@ import { WorkDetailComponent } from './components/work-detail/work-detail.compon
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
-  WORK = [
-    { project: "Project 1", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-    { project: "Project 2", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-    { project: "Project 3", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-  ]
 
+  WORK: any[] = [];
 
-  constructor() { }
+  constructor(private _service: ProjectService) {
+    this.WORK = _service.getWork();
+  }
 
   ngOnInit() {
   }

@@ -1,8 +1,8 @@
-<div class="container">
+<!-- <div class="container">
 
   <div class="mt-3">Work</div>
 
-  <img class="img mt-3" src="/assets/business-news.jpg" alt="" router>
+  <img class="img mt-3" src="/assets/business-news.jpg" alt="" routerLink="/work/Project1">
 
 
 
@@ -10,14 +10,17 @@
 
   <img class="img mt-3" src="/assets/webpage-car.jpg" alt="">
 
-</div>
+</div> -->
 
+<!-- routerLink="/work/{{WORK.project}}" -->
 
-<!-- <h3>Work</h3>
+<h3 class="mt-3">Work</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let work of works" class="col-1-4" routerLink="/work/{{WORK.project}}">
-    <div class="module hero">
-      <h4>{{WORK.project}}</h4>
+  <a *ngFor="let work of WORK, index as i" class="col-1-4">
+    <div routerLinkActive="active">
+      <h4 class="mt-3">{{work.project}}</h4>
+      <img class="img mt-3" src={{work.src}} alt="" [routerLink]="['/work', i]">
+
     </div>
   </a>
-</div> -->
+</div>

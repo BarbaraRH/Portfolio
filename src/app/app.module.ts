@@ -7,6 +7,8 @@ import { WorkComponent } from './components/work/work.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WorkDetailComponent } from './components/work-detail/work-detail.component';
+import { ProjectService } from './project.service';
+
 
 
 @NgModule({
@@ -15,13 +17,13 @@ import { WorkDetailComponent } from './components/work-detail/work-detail.compon
     WorkComponent,
     AboutComponent,
     ContactComponent,
-    WorkDetailComponent,
+    WorkDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

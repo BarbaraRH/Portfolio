@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from '../../project.service';
+/* import { WorkComponent } from '../work/work.component'; */
 
 
 @Component({
@@ -8,15 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkDetailComponent implements OnInit {
 
-  WORK = [
-    { project: "Project 1", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-    { project: "Project 2", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-    { project: "Project 3", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex enim mollitia assumenda, voluptate, veniam reiciendis, alias quidem laborum deleniti sit! Similique obcaecati magnam laudantium alias aliquam ipsa non voluptates." },
-  ]
+  WORK: any[] = [];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private _service: ProjectService) {
+    this.route.params.subscribe(params => {
+      console.log(params['project'])
+      this.WORK = this._service.getProject(params['project'])
+    })
+  }
 
   ngOnInit() {
+
   }
 
 }

@@ -6,10 +6,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WorkDetailComponent } from './components/work-detail/work-detail.component';
 
 const routes: Routes = [{ path: 'work', component: WorkComponent },
+{ path: 'workDetail/:id', component: WorkDetailComponent },
 { path: 'about', component: AboutComponent },
 { path: 'contact', component: ContactComponent },
 { path: '', redirectTo: '/work', pathMatch: 'full' },
-{ path: 'detail/:project', component: WorkDetailComponent }
+{ path: 'work/:project', component: WorkDetailComponent }
 ];
 
 @NgModule({
